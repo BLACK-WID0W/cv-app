@@ -1,0 +1,11 @@
+.prof-sub-block{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1200px){
+    .prof-sub-block{
+        display: flex;
+        flex-direction: column;
+    }
+}
