@@ -128,8 +128,7 @@ export default function Form(){
                             )
                         })}
                         <img src={addLogo} className="add-btn" onClick={() => {
-                            const currList = [...eduList];
-                            currList.push({
+                            setEduList([...eduList, {
                                 "eduID": crypto.randomUUID(), 
                                 "uni": '',
                                 "course": '', 
@@ -137,8 +136,7 @@ export default function Form(){
                                 "uniTo": '',
                                 "updateEduHandler": updateEduHandler,
                                 "isShown": true,
-                            })
-                            setEduList(currList);
+                            }]);
                         }}/>
                     </section>
 
@@ -178,8 +176,7 @@ export default function Form(){
                             )
                         })}
                         <img src={addLogo} className="add-btn" onClick={() => {
-                            const currList = [...proList];
-                            currList.push({
+                            setProList([...proList, {
                                 "proID": crypto.randomUUID(), 
                                 "comp": '',
                                 "position": '', 
@@ -188,8 +185,7 @@ export default function Form(){
                                 "proTo": '',
                                 "updateProHandler": updateProHandler,
                                 "isShown": true,
-                            })
-                            setProList(currList);
+                            }]);
                         }}/>
                     </section>
 
